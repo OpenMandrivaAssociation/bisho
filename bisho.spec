@@ -26,9 +26,10 @@ Moblin's web services settings
 %prep
 %setup -q 
 %patch0 -p1
+perl -pi -e 's,&& ./configure.*,,' ./autogen.sh
 
 %build
-NOCONFIGURE=nil ./autogen.sh
+./autogen.sh
 %configure2_5x
 %make
 
