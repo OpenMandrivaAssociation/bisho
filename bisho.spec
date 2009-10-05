@@ -9,7 +9,7 @@ Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.
 Patch0: bisho-0.12-format.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
-BuildRequires: libmojito-devel
+BuildRequires: mojito-devel
 BuildRequires: libgtk+2-devel
 BuildRequires: libGConf2-devel
 BuildRequires: libgnome-keyring-devel
