@@ -15,6 +15,7 @@ BuildRequires: libGConf2-devel
 BuildRequires: libgnome-keyring-devel
 BuildRequires: libsoup-2.4-devel
 BuildRequires: librest-devel
+BuildRequires: unique-devel
 BuildRequires: gnome-common
 BuildRequires: intltool
 BuildRequires: gettext
