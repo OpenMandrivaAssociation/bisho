@@ -1,6 +1,6 @@
 Name: bisho
 Summary: Moblin's web services settings
-Group: Applications/Settings
+Group: System/Configuration/Other
 Version: 0.12
 License: LGPL 2.1
 URL: http://www.moblin.org
