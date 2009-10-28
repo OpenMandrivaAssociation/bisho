@@ -1,11 +1,18 @@
+%define version 0.16
+%define rel 1
+%define snapshot git20091027
+%define release %mkrel 0.%{snapshot}.%{rel}
+
+%define sversion %{version}%{snapshot}
+
 Name: bisho
 Summary: Moblin's web services settings
 Group: System/Configuration/Other
-Version: 0.12
+Version: %{version}
 License: LGPL 2.1
 URL: http://www.moblin.org
-Release: %mkrel 1
-Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
+Release: %{release}
+Source0: %{name}-%{sversion}.tar.gz
 Patch0: bisho-0.12-format.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -24,8 +31,8 @@ BuildRequires: gettext
 Moblin's web services settings
 
 %prep
-%setup -q 
-%patch0 -p1
+%setup -q -n %{name}-%{sversion} 
+#%patch0 -p1
 perl -pi -e 's,&& ./configure.*,,' ./autogen.sh
 
 %build
