@@ -13,7 +13,6 @@ License: LGPL 2.1
 URL: http://www.moblin.org
 Release: %{release}
 Source0: %{name}-%{sversion}.tar.gz
-Patch0: bisho-0.12-format.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: mojito-devel
@@ -32,7 +31,6 @@ Moblin's web services settings
 
 %prep
 %setup -q -n %{name}-%{sversion} 
-#%patch0 -p1
 perl -pi -e 's,&& ./configure.*,,' ./autogen.sh
 
 %build
