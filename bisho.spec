@@ -22,6 +22,7 @@ BuildRequires: libgnome-keyring-devel
 BuildRequires: libsoup-2.4-devel
 BuildRequires: librest-devel
 BuildRequires: unique-devel
+BuildRequires: nbtk-devel
 BuildRequires: gnome-common
 BuildRequires: intltool
 BuildRequires: gettext
