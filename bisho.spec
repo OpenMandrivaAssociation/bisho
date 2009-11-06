@@ -1,6 +1,7 @@
 %define version 0.16
-%define rel 1
-%define snapshot git20091027
+%define rel 2
+%define snapshot 0
+#git20091027
 %define release %mkrel 0.%{snapshot}.%{rel}
 
 %define sversion %{version}%{snapshot}
@@ -12,7 +13,8 @@ Version: %{version}
 License: LGPL 2.1
 URL: http://www.moblin.org
 Release: %{release}
-Source0: %{name}-%{sversion}.tar.gz
+Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.gz
+Patch0: bisho-0.16-translations-update-20091104.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: mojito-devel
@@ -31,7 +33,8 @@ BuildRequires: gettext
 Moblin's web services settings
 
 %prep
-%setup -q -n %{name}-%{sversion} 
+%setup -q -n %{name}-%{version}
+%patch0 -p1
 perl -pi -e 's,&& ./configure.*,,' ./autogen.sh
 
 %build
