@@ -4,7 +4,7 @@ Group: System/Configuration/Other
 Version: 0.27.2
 Release: %mkrel 3
 License: LGPL 2.1
-URL: http://www.meego.com
+URL: https://www.meego.com
 Source0: http://repo.meego.com/MeeGo/releases/1.1/netbook/repos/source/%{name}-%{version}.tar.gz
 BuildRequires: libsocialweb-devel
 BuildRequires: libgtk+2-devel
